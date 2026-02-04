@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Masari Amen Purple Theme */
+    --background: 270 50% 98%;
+    --foreground: 282 60% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 282 60% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 282 60% 15%;
+
+    /* Deep Purple - Primary Brand Color */
+    --primary: 282 55% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Lavender - Secondary */
+    --secondary: 282 40% 79%;
+    --secondary-foreground: 282 60% 20%;
+
+    --muted: 282 20% 94%;
+    --muted-foreground: 282 20% 45%;
+
+    --accent: 282 50% 92%;
+    --accent-foreground: 282 55% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success for notifications */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning/In Progress */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 282 30% 88%;
+    --input: 282 30% 88%;
+    --ring: 282 55% 47%;
+
+    --radius: 1rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(282 55% 47%) 0%, hsl(282 65% 35%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(282 50% 95%) 0%, hsl(282 40% 88%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(282 30% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(282 55% 47% / 0.12);
+    --shadow-md: 0 4px 16px -4px hsl(282 55% 47% / 0.18);
+    --shadow-lg: 0 8px 32px -8px hsl(282 55% 47% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(282 55% 47% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 282 60% 8%;
+    --foreground: 282 20% 95%;
+
+    --card: 282 50% 12%;
+    --card-foreground: 282 20% 95%;
+
+    --popover: 282 50% 12%;
+    --popover-foreground: 282 20% 95%;
+
+    --primary: 282 55% 60%;
+    --primary-foreground: 282 60% 10%;
+
+    --secondary: 282 40% 25%;
+    --secondary-foreground: 282 20% 90%;
+
+    --muted: 282 30% 18%;
+    --muted-foreground: 282 20% 65%;
+
+    --accent: 282 40% 22%;
+    --accent-foreground: 282 30% 85%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 85% 45%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 282 30% 20%;
+    --input: 282 30% 20%;
+    --ring: 282 55% 60%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Cairo', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-custom-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-custom-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.leaflet-control-zoom a {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--primary)) !important;
+  border: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
