@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
         >
           <div>
             <h1 className="text-xl font-bold text-foreground">مرحباً 👋</h1>
-            <p className="text-muted-foreground">ولي أمر الطالب <span className="font-semibold text-primary">محمد</span></p>
+            <p className="text-muted-foreground">ولي أمر الطالبة <span className="font-semibold text-primary">الهنوف الحربي</span></p>
           </div>
 
           {/* View mode toggle */}

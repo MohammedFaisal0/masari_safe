@@ -67,8 +67,8 @@ const ProfilePage: React.FC = () => {
           <div className="w-24 h-24 rounded-full gradient-primary flex items-center justify-center shadow-custom-lg mb-4">
             <span className="text-3xl text-primary-foreground font-bold">أ</span>
           </div>
-          <h1 className="text-xl font-bold text-foreground">أحمد محمد العتيبي</h1>
-          <p className="text-sm text-muted-foreground">ولي أمر الطالب محمد</p>
+          <h1 className="text-xl font-bold text-foreground">أحمد محمد الحربي</h1>
+          <p className="text-sm text-muted-foreground">ولي أمر الطالبة الهنوف الحربي</p>
         </motion.div>
       </div>
 

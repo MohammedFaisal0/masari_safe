@@ -12,7 +12,7 @@ interface Student {
 }
 
 const initialStudents: Student[] = [
-  { id: '1', name: 'محمد أحمد', grade: 'الصف الثالث', phone: '0512345678', boarded: false },
+  { id: '1', name: 'الهنوف الحربي', grade: 'الصف الثالث', phone: '0512345678', boarded: false },
   { id: '2', name: 'سارة خالد', grade: 'الصف الخامس', phone: '0523456789', boarded: false },
   { id: '3', name: 'عبدالله فهد', grade: 'الصف الثاني', phone: '0534567890', boarded: false },
   { id: '4', name: 'نورة سعود', grade: 'الصف الرابع', phone: '0545678901', boarded: false },
